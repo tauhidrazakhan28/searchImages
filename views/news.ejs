@@ -1,0 +1,14 @@
+<div style="margin-bottom:30px;">
+    <pre><%-JSON.stringify(news)%></pre>
+</div>
+
+<div>
+<% news.forEach(function(obj, index){ %>
+        <div>
+          <div style="font-weight:bolder;">News <%-index+1%></div>
+          <div><%=obj.title%></div>
+          <div><a href="<%=obj.link%>"><%=obj.link%></a></div>
+          <hr>
+        </div>
+        <%})%>
+</div>
